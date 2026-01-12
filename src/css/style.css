@@ -11,12 +11,12 @@ html, body {
     background-color: var(--bg-color)
 }
 
-nav {
+.link-bar {
     display: flex;
     background-color: var(--accent-color);
 }
 
-nav a {
+.link-bar a {
     padding: 1rem 0.7rem;
     align-content: center;
     color: var(--bg-color);
@@ -26,19 +26,51 @@ nav a {
     border-radius: 5px;
 }
 
-nav a:hover {
+.link-bar a:hover {
     filter: brightness(0.8)
 }
 
-.content-body {
+.link-bar a.icon {
+    padding: 0.5rem 0.5rem;
+}
+
+.link-bar img{
+    width: 2vw;
+}
+
+.link-bar.centered {
+    justify-content: center;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-areas: 
+    "title-card ."
+    ". selfie";
+    grid-template-columns: auto 1fr;
     margin: 6rem 7rem;
     outline: auto;
 }
 
-.title-card {
+.home-grid div.title-card {
+    grid-area: title-card;
     background-color: var(--accent-color);
     color: var(--bg-color);
     width: fit-content;
-    padding: 1rem 1rem;
+    padding: 5rem 5rem;
     border-radius: 15px;
+}
+
+.home-grid div.selfie {
+    grid-area: selfie;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.selfie img {
+    width: 40vw;
+    min-width: 330px;
+    border-radius:500px;
 }
